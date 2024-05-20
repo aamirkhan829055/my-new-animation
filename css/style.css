@@ -1,0 +1,237 @@
+header {
+    position: relative;
+}
+
+header img {
+    width: 100%;
+    height: 790px;
+    object-fit: cover;
+}
+
+header .cover {
+    padding: 30px 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .cover .header-content {
+    position: relative;
+    padding: 56px;
+    overflow: hidden;
+}
+
+header .cover .header-content .line {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border: 9px solid #fff;
+    -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+    clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+}
+
+header .cover .header-content h2 {
+    font-weight: 300;
+    font-size: 35px;
+    color: #fff;
+}
+
+header .cover .header-content h4 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    font-style: revert-layer;
+    font-family: monospace;
+}
+
+/* my css */
+.text-with-border {
+    color: #fff;
+    background-clip: text;
+
+    font-size: 56px;
+    font-weight: 600;
+    margin: 5px 0 20px;
+}
+
+
+
+#loader {
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 9999;
+}
+
+#loader::after {
+    content: "";
+    width: 100%;
+    height: 799px;
+    background-color: #000000;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    position: absolute;
+    animation: arbaj 1s linear;
+    transition: all 0.5s;
+
+
+}
+
+@keyframes arbaj {
+    0% {
+        width: 799px;
+        transition: all 0.2s step-end;
+    }
+
+    50% {
+
+        width: 0px;
+    }
+
+    50% {
+        width: 0%;
+        opacity: 0;
+    }
+
+}
+
+
+#loader::before {
+    content: "";
+    background-color: #ffffff;
+    width: 100%;
+    height: 799px;
+    text-align: left;
+    right: 0;
+    animation: arbaj 1s linear;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    position: absolute;
+}
+
+/* @keyframes arbaj {
+    0% {
+        width: 9px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    50% {
+        width: 0%;
+        width: 799px;
+    }
+
+    50% {
+        width: 0%;
+        opacity: 0;
+    }
+
+} */
+
+
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.text-slide-left {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.text-slide-right {
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+.width-aamir {
+    width: 195px;
+    height: 241px;
+    margin: 0 auto;
+}
+
+.img-web img {
+    right: 13%;
+    top: 56%;
+    width: 10%;
+    position: absolute;
+    height: 192px !important;
+    border-radius: 9px;
+}
+
+@media (max-width:1200px) {
+    .img-web img {
+        display: none;
+    }
+
+    .brokun-man a {
+        font-size: 22px;
+    }
+
+    .text-with-border {
+        font-size: 37px;
+    }
+
+
+    header .cover .header-content h4 {
+
+        font-style: normal;
+        font-size: 18px;
+        font-family: inherit;
+    }
+
+    header .cover .header-content {
+        padding: 29px !important;
+    }
+
+    header .cover {
+        padding: 0px !important;
+    }
+
+    .aamirkhan-text {
+        left: 12% !important;
+    }
+
+    .width-aamir {
+        left: 25% !important;
+    }
+
+
+}
+
+@media (max-width:992px) {}
+
+@media (max-width:768px) {}
+
+@media (max-width:568px) {
+    .width-aamir {
+        left: 25%;
+    }
+}
