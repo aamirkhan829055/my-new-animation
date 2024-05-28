@@ -1,0 +1,166 @@
+/* Add your CSS styles here */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+.section-22 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.piece {
+
+
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: 99;
+    background-image: url('../images/1670576656375.png');
+    background-size: 200% 200%;
+    transition: transform 4s ease-in-out;
+}
+
+.piece1 {
+    background-position: top left;
+    border-top: 2px solid #4b12bd;
+    border-left: 2px solid #4b12bd;
+}
+
+.piece2 {
+    background-position: top right;
+    right: 0;
+    border-top: 2px solid #4b12bd;
+    border-right: 2px solid #4b12bd;
+}
+
+.piece3 {
+    background-position: bottom left;
+    bottom: 0;
+    border-bottom: 2px solid #4b12bd;
+    border-left: 2px solid #4b12bd;
+}
+
+.piece4 {
+    background-position: bottom right;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid #4b12bd;
+    border-right: 2px solid #4b12bd;
+}
+
+.move-top-left {
+    transform: translate(-100%, -100%);
+}
+
+.move-top-right {
+    transform: translate(100%, -100%);
+}
+
+.move-bottom-left {
+    transform: translate(-100%, 100%);
+}
+
+.move-bottom-right {
+    transform: translate(100%, 100%);
+}
+
+
+
+/* img */
+
+.pojisun {
+    position: relative;
+
+
+}
+
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 26%;
+    left: 23%;
+
+
+}
+
+.frame img {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.5s;
+    border-radius: 50%;
+
+    border: 1px solid #4b12bd;
+
+}
+
+.rotating {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.starting {
+    margin-top: 20px;
+    padding: 13px 41px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 0;
+    outline: 3px solid #4b12bd !important;
+    outline-offset: -19px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    background-color: #4b12bd;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.starting:hover {
+    outline-offset: 0px;
+    color: #4b12bd;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+.section-22 {
+    padding: 100px 0px;
+}
+
+
+.te img {
+    width: 50%;
+}
+
+.te {
+    position: absolute;
+    top: 0;
+}
