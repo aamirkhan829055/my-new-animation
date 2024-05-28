@@ -177,19 +177,10 @@ header .cover .header-content h4 {
     margin: 0 auto;
 }
 
-.img-web img {
-    right: 13%;
-    top: 56%;
-    width: 10%;
-    position: absolute;
-    height: 192px !important;
-    border-radius: 9px;
-}
+
 
 @media (max-width:1200px) {
-    .img-web img {
-        display: none;
-    }
+
 
     .brokun-man a {
         font-size: 22px;

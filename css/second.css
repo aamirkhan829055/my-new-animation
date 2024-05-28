@@ -131,7 +131,7 @@
     font-weight: bold;
     letter-spacing: 1px;
     border: 0;
-    outline: 3px solid #4b12bd !important;
+    /* outline: 3px solid #4b12bd !important; */
     outline-offset: -19px;
     border-radius: 50px;
     text-transform: uppercase;
@@ -141,6 +141,8 @@
 }
 
 .starting:hover {
+    border: 0;
+    outline: 4px solid #4b12bd !important;
     outline-offset: 0px;
     color: #4b12bd;
     background-color: transparent;
