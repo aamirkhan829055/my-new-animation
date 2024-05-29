@@ -21,8 +21,11 @@
 
 <body>
     <div class="section-22">
-        <div class="pojisun">
-            <div class="image-container" id="owner">
+        <div class="pojisun text-right">
+            <a href="../animation.html" class="">
+                <button id="stopButton" class="starting mb-3">Next</button>
+            </a>
+            <div class="image-container">
                 <div class="piece piece1"></div>
                 <div class="piece piece2"></div>
                 <div class="piece piece3"></div>
@@ -33,26 +36,17 @@
                 <div class="d-flex justify-content-between">
                     <button id="startButton" class="starting">Start</button>
                     <button id="toggleButton" class="starting">Start/Stop Rotation</button>
-
                     <button id="stopButton" class="starting">Stop</button>
                 </div>
             </a>
 
 
-            <div class="frame">
+            <div class="frame" id="owner">
                 <img id="rotatingImage" src="images/1670576656375.png" alt="Rotating Image" width="50%">
             </div>
         </div>
     </div>
-    <!-- <div class="container">
-        <div>
-            <div class="image-column" style="padding: 100px 0px ;">
-                <div class="posittion-set" class="te">
-                    <img src="images/david malan.jpg" alt="" id="owner">
-                </div>
-            </div>
-        </div>
-    </div> -->
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>animation</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- <link rel="icon" href="images/Screenshot_8.png" /> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <style>
+    .flrem-img {
+      position: relative;
+      border-top: 20px solid #c3cbcb;
+      clip-path: polygon(2% 0, 100% 0, 100% 100%, 2% 100%);
+
+    }
+
+    .animation {
+      height: 282px;
+    }
+
+    .ww-1 {
+      position: absolute;
+      bottom: 157px;
+      left: 20%;
+      /* transform: translateY(242px); */
+      transition: all 0.3s;
+    }
+
+    .ww-2 {
+      /* transform: translateY(242px); */
+      position: absolute;
+      bottom: 157px;
+      left: 27%;
+      transition: all 0.4s;
+    }
+
+    .ww-3 {
+      /* transform: translateY(242px); */
+      position: absolute;
+      bottom: 140px;
+      left: 31%;
+      transition: all 0.5s;
+    }
+
+    .ww-4 {
+      /* transform: translateY(242px); */
+      position: absolute;
+      bottom: 123px;
+      left: 35%;
+      transition: all 0.6s;
+    }
+
+    .ww-5 {
+      /* transform: translateY(242px); */
+      position: absolute;
+      bottom: 150px;
+      left: 48%;
+      transition: all 0.7s;
+    }
+
+    .ww-6 {
+      /* transform: translateY(242px); */
+      position: absolute;
+      bottom: 115px;
+      left: 35%;
+      transition: all 0.8s;
+    }
+
+    .ww-7 {
+      /* transform: translateY(242px); */
+      position: absolute;
+      bottom: 145px;
+      left: 48%;
+      transition: all 0.9s;
+    }
+
+    .animation:hover .ww-1 {
+      transform: translateY(0px);
+    }
+
+    .animation:hover .ww-2 {
+      transform: translateY(0px);
+    }
+
+    .animation:hover .ww-3 {
+      transform: translateY(0px);
+    }
+
+    /* .animation:hover .ww-4 {
+      transform: translateY(0px);
+    }
+
+    .animation:hover .ww-5 {
+      transform: translateY(0px);
+    }
+
+    .animation:hover .ww-6 {
+      transform: translateY(0px);
+    }
+
+    .animation:hover .ww-7 {
+      transform: translateY(0px);
+    } */
+
+    .animation img {
+      display: none;
+      position: absolute;
+      transition: all 2s ease-in-out;
+
+    }
+
+    .animation img.active {
+      display: block;
+    }
+
+    .ww-1 {
+      bottom: 157px;
+      left: 20%;
+    }
+
+    .ww-2 {
+      bottom: 157px;
+      left: 27%;
+    }
+
+    .ww-3 {
+      bottom: 140px;
+      left: 31%;
+    }
+
+    .ww-4 {
+      bottom: 123px;
+      left: 35%;
+    }
+
+    .ww-5 {
+      bottom: 150px;
+      left: 48%;
+    }
+
+    .ww-6 {
+      bottom: 115px;
+      left: 35%;
+    }
+
+    .ww-7 {
+      bottom: 145px;
+      left: 48%;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="animation">
+          <img src="maseen/ww7.png" class="ww-7" />
+          <img src="maseen/ww5.png" class="ww-5" />
+          <img src="maseen/ww1.png" class="ww-1" />
+          <img src="maseen/ww6.png" class="ww-6" />
+          <img src="maseen/ww4.png" class="ww-4" />
+          <img src="maseen/ww2.png" class="ww-2" />
+          <img src="maseen/ww3.png" class="ww-3" />
+
+
+
+
+
+        </div>
+        <img src="maseen/frem.png" class="flrem-img" />
+      </div>
+    </div>
+  </div>
+
+  <script src=" js/jquery-3.6.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = document.querySelectorAll(".animation img:not(.-img)");
+      let currentIndex = 0;
+
+      function showImage(index) {
+        images.forEach((img, i) => {
+          if (i === index) {
+            img.classList.add('active');
+          } else {
+            // img.classList.remove('active');
+          }
+        });
+      }
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }
+
+      showImage(currentIndex);
+      setInterval(nextImage, 1000);
+    });
+
+  </script>
+</body>
+
+</html>
